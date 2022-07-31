@@ -1,6 +1,5 @@
 from rest_framework import serializers
 from .models import Client, MailingList, Message
-from json import loads 
 
 class ClientSerializer(serializers.ModelSerializer):
     class Meta:
@@ -10,7 +9,7 @@ class ClientSerializer(serializers.ModelSerializer):
 class MalingListSerializer(serializers.ModelSerializer):
     class Meta:
         model = MailingList
-        fields = ['id', 'startTime', 'message', 'code', 'tag', 'endTime']
+        fields = ['id', 'startTime', 'msg', 'code', 'tag', 'endTime']
 
 class MessageSerializer(serializers.ModelSerializer):
     class Meta:
