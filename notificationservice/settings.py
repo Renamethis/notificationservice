@@ -134,6 +134,9 @@ CELERY_RESULT_BACKEND = "redis://127.0.0.1:6379/0"
 CELERY_BEAT_SCHEDULE = {
     "sample_task": {
         "task": "notificationservice.tasks.send_messages",
-        "schedule": timedelta(seconds=5),
+        "schedule": timedelta(seconds=10),
     },
+}
+SWAGGER_SETTINGS = {
+   'USE_SESSION_AUTH': False,
 }
